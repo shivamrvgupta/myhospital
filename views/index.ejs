@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Hospital | Database</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bx-plus-medical icon'></i>
+          <div class="logo_name">MY Hospital</div>
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="/">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+           <span class="tooltip">Dashboard</span>
+        </li>
+      </ul>
+    </div>
+          <!-- Home -->
+    
+          <section class="home-section">
+            <div class="text">
+              <h1> Dashboard</h1>
+            </div>
+          <!-- Details -->
+          <section id="details" class="detail-section py-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 py-3">
+                  <div class="card">
+                    <div class="card-body d-inline-flex">
+                      <button class="bg-primary p-3 rounded btn ">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAATJJREFUaEPtWW0OwiAM7W6mJ1NPpjfT1EiyINA+uq2QlV9L1tL3QdkHC00+lsnxUxDwdtDiwDsDj85lzf+WR4uuMVsBWPODgFVBa77KgQsR3X7rhq+PHg8iureKSj2Qq3Q0gVTvSkSvUvEWAWae1PcCnuoyeCbxN1oERlGfQU9PoLrlz+JAEPBu4k0ckLbcrUmqHnRIDwQB0KJwQKUAqCoSrqp/6h6QFNr7vvg6vTcA6/xBwKqgNd/sALKj9MRKBINAj6pITjggKeB939wDQSBriPy1RhIoHEB2lJ7Y3R3oAYXkBAGVAoikYKyq/qk/aEBB4XCzA08i8jgTqDEtrpbWEhqJQPWgo0WA1WcSI4wqTs3fNq+DjnQiw+oXT2eqP0xHkFyLQeOAdi6XuCDgIvuq6Af4PmMxJIcvjgAAAABJRU5ErkJggg=="/>
+                      </button> 
+                      <div class="g-1 px-3 pt-3">
+                        <h5 class="text-dash text-dark">500</h5>
+                        <p class="text-muted">Appointments</p>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 py-3">
+                  <div class="card">
+                    <div class="card-body d-inline-flex">
+                      <button class="bg-secondary p-3 rounded btn">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAkBJREFUaEPtmVFOAzEMRNOTUU4GnAxuBjJao8gd2+M0yVKp/IDUNDvPHjvOcmkP/nN5cP3tCXB2Bv9bBj6PgLyygdkF8H4I0t9In4i/Hh98tdYoiB0AIvrtEPbRWkMQIlyjr3AUxGqAXrwK8yDQ2hRiNYCI7q0xHWIHAIqsgKBMeGvdTKwG8AShTGRrIcRKgExQDyF/a6FHHfQGYhWAJ15aowjVdhmJFYtZsC0AkXgR4BV2D9PXh+63xUKMeBWKulNU3PAQnGmhyPNe76+0WGi3WQBMwS6BmAHAiM8OsOFM3AsQeV46DWqNUzNxDwBTsJVTuDp2/GZ1FKAijAFVi6Gp1OtMwwCZ5+Ww0n6vwux3kI088WH9VDOQideHRRAj4t0sVAAi26BiRRASZZudyDYvx9jhFT5dA5mPs8+9mYfxPIL+24/JACuOXTdcsCgKGUD1gsFeIZnIR5MqlYGsYL1bUv+9SsG6Po9IvAxk4nXPCELW2AlyWuRVgAfwDai9y0j65uDYa7p47yRGD+pbIhq8Mogl4qNRwmbA9vQKxDLxEYAViCJs1ywv2EobRVFDAhXiFPHZNIo60YzxAN5tqaYPFmUHma2FrFjlEUs9bxkyANZKU8eDSjYygMqbhq2Rzw4yPUWZ131SwGIt+34/vElVorxylIj2HpptqmDIQtHFRfZnszK123hgFoD1caU2qkEtrWcyEP1fy7772WKbnjAbp1lB4bWvFNLi4qiNniaqwpCdA5W9Tln7BDgl7N1DfwCHqLsx9GpibwAAAABJRU5ErkJggg=="/>
+                      </button>
+                      <div class="g-1 px-3 pt-3">
+                        <h5 class="text-dash text-dark">53</h5>
+                        <p class="text-muted">Staffs</p>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 py-3">
+                  <div class="card">
+                    <div class="card-body d-inline-flex">
+                      <button class="bg-danger p-3 rounded btn">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAUVJREFUaEPtV10OwjAIZjfTk6kn05tpSFyyMUahhW7N6JMPBb4fsGyCwc80OH5IAkc7mA6M4MCXgIx2zVRPA8aU0MERU70k4KA4TRHuQABmMaXYJTUtlASMCqQDpqFaqNslrmYGNDHIIwn83XSfgeEdMP6JNF9vcuAJAI9mCG0JXgCAONgjsTsD+Bn0Lok9AmcCL5LgCNwA4M34JVrZ1iWraKyPB1t3/j1f2ODlCCD4ZeAHAO6OAC2p6FuyEVFDAMEjiSMObeWNmBwByvpIAsUXXUNA+3BFOSSuJEkgSnbtVpsOpANlBZqHuFyi741V22tmoC+8crUiAbpKlFP2u6F6iXEP4hapfjD5Sgged6HVWqN5ZWs/zmsJm+olgVqZhbh0gIpjUsTBEVO9nAEHxZscv4QDASL7pdQ44FctIFMSCBDVlPIHYtNQMaOukSsAAAAASUVORK5CYII="/>
+                      </button>
+                      <div class="g-1 px-3 pt-3">
+                        <h5 class="text-dash text-dark">150</h5>
+                        <p class="text-muted">Patients</p>
+                      </div>   
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 py-3">
+                  <div class="card">
+                    <div class="card-body d-inline-flex">
+                      <button class="bg-success p-3 rounded btn">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAaBJREFUaEPtmVtuAyEMRZ2VNV1Z25U1O2vlaqimYIwfl9CR4CdSBOYczDO50cXL7eL8tAVWZ3BmBt6J6I2IHkT0cXzCfWcJFPgzMEvw99AyQ0CCL9BwCbSABj9FAilggYdLoAR68DxluPBirgtkOiEENPiyaC11Qos7K+AB89Q1y2QEIkCRNqpMVCADkmnbyEQEEACIGD8yXgFYx8epnN6dPAJI+DIV0jGtAumOlJWYim0RSHVg3A/DfYwEwoGN4Odqob40gVDAE9FXJTEaLK7u7rMXVLuYWUAYJiIgtVMvgBLMnYg+lSmwSoCRmgugBMPwLNErKwWas0uCqVNfi6wU4Pf16xlIguH5/6JkYaUAw7PEb7HAjBbjKGOjHbVmGPX3J94WELbL0YiP1tTOQD1CrhFJnsTuAxCxBnpT5iniW0BZsTsDx+Cos2RPIe+mb6jvmnozM2BgFatsAdRB9m8zEAWLtGvu/6OLlNSJ54+LCKTWBiIg3U/QoL14zQMmkgFuw2/k8jum9l5GiZn/vbFsoyioKXG2wJRhdQS9fAa+AQihfDEQ3BJIAAAAAElFTkSuQmCC"/>
+                      </button>
+                      <div class="g-1 px-3 pt-3">
+                        <h5 class="text-dash text-dark">54</h5>
+                        <p class="text-muted">Rooms</p>
+                      </div>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Appoinment Survey list -->
+    
+          <section class="table-list py-3">
+            <div class="container">
+              <div class="card container">
+                <div>
+                  <h4 class="text float-start">Appointment List</h4>
+                  <a href="/add-appointment" class="btn btn-outline-light text-dark btn-sm float-end m-3">
+                    <i class="bx bx-plus"></i>
+                  </a>
+                </div>
+                <table class="table py-3">
+                  <% if (appointments != '') { %>
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Patient Name</th>
+                      <th scope="col">Contact Number</th>
+                      <th scope="col">Doctor</th>
+                      <th scope="col">Disease</th>
+                      <th scope="col" class="text-center">Date of Appointment</th>
+                      <th scope="col" class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   
+                      <% appointments.forEach((row, index) => { %> 
+                      <tr>
+                        <td scope="col"><%= index  %> </td>
+                        <td scope="col"><%= row.name %> </td>
+                        <td scope="col"><%= row.contact_number %></td>
+                        <td scope="col"><%= row.doctor %></td>
+                        <td scope="col"><%= row.disease %></td>
+                        <td scope="col" class="text-center"> <%= row.date %></td>
+                        <td class="text-center">
+                          <a
+                            href="./update-appointment/<%= row.id %>"
+                            type="submit"
+                            class="btn btn-warning btn-sm"
+                          >
+                            <i class="bx bxs-edit"></i>
+                          </a>
+                          <a
+                            href="./delete-appointment/<%= row.id %>"
+                            type="submit"
+                            class="btn btn-danger btn-sm"
+                          >
+                        
+                          <i class="bx bxs-minus-circle"></i>
+                      
+                          </a>
+                        </td>
+                      </tr>
+                      <% }) %> 
+                    <% } else { %>
+                      <h1 class="text-center text-secondary">NO Appoinment Found</h1>
+                    <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+    
+            </div>
+          </section>
+        </section>
+    
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript">
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+      
+        closeBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("open");
+          menuBtnChange();//calling the function(optional)
+        });
+      
+        searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+          sidebar.classList.toggle("open");
+          menuBtnChange(); //calling the function(optional)
+        });
+      
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+         if(sidebar.classList.contains("open")){
+           closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+         }else {
+           closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+         }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Hospital | Database</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+    rel="stylesheet"
+  />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-plus-medical icon"></i>
+        <div class="logo_name">MY Hospital</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="../../index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="../staff.html">
+            <i class="bx bxs-user-rectangle"></i>
+            <span class="links_name">Staff</span>
+          </a>
+          <span class="tooltip">Staff</span>
+        </li>
+        <li>
+          <a href="../patients.html">
+            <i class="bx bxs-user"></i>
+            <span class="links_name">Patients</span>
+          </a>
+          <span class="tooltip">Patients</span>
+        </li>
+        <li>
+          <a href="../rooms.html">
+            <i class="bx bx-home-alt"></i>
+            <span class="links_name">Rooms</span>
+          </a>
+          <span class="tooltip">Rooms</span>
+        </li>
+        <li>
+          <a href="../reports.html">
+            <i class="bx bxs-report"></i>
+            <span class="links_name">Reports</span>
+          </a>
+          <span class="tooltip">Reports</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name">User ID</div>
+              <div class="job">Records</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+
+    <section class="pt-5 mt-5">
+      <div class="container">
+        <br />
+        <div class="row">
+          <div class="col-1"></div>
+
+          <div class="col-sm-10">
+            <div class="card">
+              <div
+                class="card-title text-center text-white"
+                style="background: rgb(17, 16, 29)"
+              >
+                <h4 class="mt-2 py-3"> <%= viewTitle %> </h4>
+              </div>
+              <div class="card-body">
+                <form action="" method="POST">
+                  <label for="id_name" class="">
+                    Name:
+                  </label>
+                  <input type="text" name="name" class="form-control" maxlength="75" required="" id="id_name">
+
+                  <label for="number" class="">
+                    Contact Number:
+                  </label>
+                  <input type="text" name="number" class="form-control" maxlength="75" required="" id="number">
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-1">
+                      <label for="diease" class="">
+                        Diease:
+                      </label>
+                      <input type="text" name="diease" class="form-control" maxlength="75" required="" id="diease">
+                    </div>  
+                    <div class="col-md-6 mb-1">
+                      <label for="doctor" class="">
+                        Treated by Doctor:
+                      </label>
+                      <input type="text" name="doctor" class="form-control" maxlength="75" required="" id="doctor">
+                    </div> 
+                    <div class="col-md-6 mb-1">
+                      <label for="room_no" class="">
+                        Room No:
+                      </label>
+                      <input type="text" name="room_no" class="form-control" maxlength="75" required="" id="room_no">
+                    </div>  
+                    <div class="col-md-6 mb-1">
+                      <label for="date" class="">
+                        Date of Admit:
+                      </label>
+                      <input type="text" name="date" class="form-control" maxlength="75" required="" id="date">
+                    </div> 
+                  </div> 
+                  <br>
+                  <button type="submit" class="btn btn-outline-dark waves-effect btn-block waves-light">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript">
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      searchBtn.addEventListener("click", () => {
+        // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
+  </body>
+</html>
